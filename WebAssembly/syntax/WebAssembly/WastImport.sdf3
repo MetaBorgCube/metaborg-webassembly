@@ -1,9 +1,9 @@
-module WastImport
+module WebAssembly/WastImport
 
 imports
   
-  WastCommon
-  WastVarType
+  WebAssembly/WastCommon
+  WebAssembly/WastVarType
 
 context-free start-symbols
   

@@ -1,4 +1,4 @@
-module WastCommon
+module WebAssembly/WastCommon
 
 lexical syntax
 

@@ -1,12 +1,12 @@
-module WastModule
+module WebAssembly/WastModule
 
 imports
   
-  WastCommon
-  WastImport
-  WastData
-  WastFunc
-  WastExport
+  WebAssembly/WastCommon
+  WebAssembly/WastImport
+  WebAssembly/WastData
+  WebAssembly/WastFunc
+  WebAssembly/WastExport
 
 context-free start-symbols
   

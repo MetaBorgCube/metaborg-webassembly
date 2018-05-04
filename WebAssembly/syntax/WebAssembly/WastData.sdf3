@@ -1,11 +1,10 @@
-module WastData
+module WebAssembly/WastData
 
 imports
   
-  WastCommon
-  WastData
-  WastVarType
-  WastExpr
+  WebAssembly/WastCommon
+  WebAssembly/WastVarType
+  WebAssembly/WastExpr
 
 context-free start-symbols
   WastData

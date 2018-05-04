@@ -1,8 +1,8 @@
-module WastExpr
+module WebAssembly/WastExpr
 
 imports
 
-  WastCommon
+  WebAssembly/WastCommon
 
 context-free start-symbols
   
