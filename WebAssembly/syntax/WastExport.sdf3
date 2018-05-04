@@ -1,0 +1,19 @@
+module WastExport
+
+imports
+  
+  WastCommon
+  WastVarType
+
+context-free start-symbols
+  
+  WastExport
+
+context-free syntax
+  
+  WastExport.WastExport = <
+    (export <WastSTRING> <WastExportArg>)>
+
+  WastExportArg.WastFunc = <
+    (func <WastID>)
+  >

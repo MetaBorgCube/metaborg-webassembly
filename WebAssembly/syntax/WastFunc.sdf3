@@ -1,0 +1,18 @@
+module WastFunc
+
+imports
+  
+  WastCommon
+  WastData
+  WastExpr
+
+context-free start-symbols
+  WastFunc
+
+context-free syntax
+  
+  WastFunc.WastFunc = <
+    (func <WastID?>
+      <{WastExpr "\n"}*> 
+    )
+    >

@@ -1,0 +1,28 @@
+module WastModule
+
+imports
+  
+  WastCommon
+  WastImport
+  WastData
+  WastFunc
+  WastExport
+
+context-free start-symbols
+  
+  WastModule
+
+context-free syntax
+  
+  WastModule.WastModule = <
+    (module 
+      <{WastImport "\n"}*>
+      <{WastData "\n"}*>
+      <{WastFunc "\n"}*>
+      <{WastExport "\n"}*>
+    )>
+
+      //<Mem*>
+      //<Func*>
+      //<Export*>
+    

@@ -1,4 +1,4 @@
-module Syntax
+module WastSyntax
 
 imports 
 
@@ -8,7 +8,7 @@ imports
 language
 
   table         : target/metaborg/sdf.tbl
-  start symbols : Start
+  start symbols : WastStart
 
   line comment  : "//"
   block comment : "/*" * "*/"
