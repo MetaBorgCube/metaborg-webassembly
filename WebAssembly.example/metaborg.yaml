@@ -1,0 +1,13 @@
+---
+id: org.example:WebAssembly.example:0.1.0-SNAPSHOT
+name: WebAssembly
+dependencies:
+  compile:
+  - org.example:WebAssembly:0.1.0-SNAPSHOT
+debug:
+  typesmart: false
+runtime:
+  nabl2:
+    debug: analysis files
+build:
+  useBuildSystemSpec: true

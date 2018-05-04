@@ -1,0 +1,7 @@
+module test
+
+language WebAssembly
+
+test parse [[
+
+]] parse succeeds

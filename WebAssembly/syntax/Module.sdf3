@@ -1,0 +1,21 @@
+module Module
+
+imports
+  
+  Common
+
+context-free start-symbols
+  
+  Module
+
+context-free syntax
+  
+  Module.Module = 
+    <(module 
+      <Import*>
+      <Mem*>
+      <Data*>
+      <Func*>
+      <Export*>
+    )
+    >

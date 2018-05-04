@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/WebAssembly.eclipse.feature_0.1.0.qualifier.jar" id="WebAssembly.eclipse.feature" version="0.1.0.qualifier">
+      <category name="WebAssembly"/>
+   </feature>
+   <category-def name="WebAssembly" label="WebAssembly language Eclipse plugin">
+      <description>
+         WebAssembly language Eclipse plugin.
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,14 @@
+module WebAssembly
+
+imports
+  
+  Common
+  Module
+
+context-free start-symbols
+  
+  Start
+
+context-free syntax
+  
+  Start.File = Module* EOF 
