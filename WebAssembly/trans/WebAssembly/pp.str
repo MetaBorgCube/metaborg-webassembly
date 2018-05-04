@@ -15,7 +15,7 @@ rules
     with
       ext      := <get-extension> path
     ; filename := <guarantee-extension(|$[pp.[ext]])> path
-    ; result   := <pp-debug> node
+    ; result   := <pp-debug-wasm> node
 
 rules
   
@@ -37,7 +37,7 @@ rules
     ; !V([], <id>)
     ; box2text-string(|120)  
       
-  pp-debug :
+  pp-debug-wast :
     ast -> result
     with
        result := <pp-WebAssembly-string> ast

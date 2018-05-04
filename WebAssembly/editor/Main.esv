@@ -2,8 +2,8 @@ module Main
 
 imports
 
-  Syntax
-  Analysis
+  WastSyntax
+  WastAnalysis
 
 language
 

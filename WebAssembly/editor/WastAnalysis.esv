@@ -1,4 +1,4 @@
-module Analysis
+module WastAnalysis
 
 imports
 

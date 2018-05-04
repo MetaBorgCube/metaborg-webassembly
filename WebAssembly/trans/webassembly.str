@@ -3,9 +3,9 @@ module webassembly
 imports
   
   completion/completion
-  pp
-  outline
-  analysis
+  WebAssembly/pp
+  WebAssembly/outline
+  WebAssembly/analysis
 
 rules // Debugging
   
