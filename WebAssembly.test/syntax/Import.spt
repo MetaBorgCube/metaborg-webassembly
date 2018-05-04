@@ -5,6 +5,39 @@ language WebAssembly
 start symbol
   Import
 
+// Import Functions
+
 test Import Function [[
   (func $a (import "b" "c"))
 ]] parse succeeds
+
+test Function Declaration [[
+  (func $a )
+]] parse fails
+
+test Import Function With Empty Parmeter Clause [[
+  (func $a (import "b" "c") (param ))
+]] parse fails
+
+test Import Function With Parmeter [[
+  (func $a (import "b" "c") (param i32))
+]] parse succeeds
+
+
+test Import Function With Multiple Parmeters [[
+  (func $a (import "b" "c") (param i32 i32))
+]] parse succeeds
+
+// Import Memory
+
+test Import Memory [[
+  (memory (import "b" "c") 1)
+]] parse succeeds
+
+test Import Memory Without Integer Value [[
+  (memory (import "b" "c") )
+]] parse fails
+
+test Memory Declaration[[
+  (memory $a 1)
+]] parse fails

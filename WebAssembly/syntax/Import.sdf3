@@ -3,6 +3,7 @@ module Import
 imports
   
   Common
+  VarType
 
 context-free start-symbols
   
@@ -10,13 +11,12 @@ context-free start-symbols
 
 context-free syntax
   
-  Import.Func = 
-    <(func <ID> <ImportStmt>)>
+  Import.Func = <
+    (func <ID?> <ImportStmt><ParameterList?>)>
+
+  Import.Mem = <
+    (memory <ID?> <ImportStmt> <INT>)>
+    
+  ParameterList.Params = < (param <{VarType " "}+>)>
     
   ImportStmt.Import = <(import <STRING> <STRING>)>
-
-      //<Mem*>
-      //<Data*>
-      //<Func*>
-      //<Export*>
-    

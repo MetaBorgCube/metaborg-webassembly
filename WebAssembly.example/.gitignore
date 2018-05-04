@@ -8,6 +8,12 @@
 
 /.polyglot.metaborg.yaml
 
+**/*.js
+**/*.html
+**/*.wasm
+**/*.aterm
+**/*pp*
+
 *.constraints
 *.scope-graph
 *.name-resolution

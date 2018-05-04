@@ -11,4 +11,7 @@ context-free start-symbols
 
 context-free syntax
   
-  Start.File = Module* EOF 
+  Start.File = <
+      <{Module "\n"}*>
+      <EOF>
+    >

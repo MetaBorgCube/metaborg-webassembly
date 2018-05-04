@@ -1,0 +1,23 @@
+module Func
+
+language WebAssembly
+
+start symbol
+  Func
+
+test Declare Func [[
+  (func
+  )
+]] parse succeeds
+
+test Declare Named Func [[
+  (func $main
+  )
+]] parse succeeds
+
+test Declare func with body [[
+  (func $main
+    (i32.const 0)
+    (i32.const 14)
+  )
+]] parse succeeds
