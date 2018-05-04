@@ -3,6 +3,10 @@ module Module
 imports
   
   Common
+  Import
+  Data
+  Func
+  Export
 
 context-free start-symbols
   
@@ -10,12 +14,15 @@ context-free start-symbols
 
 context-free syntax
   
-  Module.Module = 
-    <(module 
-      <Import*>
-      <Mem*>
-      <Data*>
-      <Func*>
-      <Export*>
-    )
-    >
+  Module.Module = <
+    (module 
+      <{Import "\n"}*>
+      <{Data "\n"}*>
+      <{Func "\n"}*>
+      <{Export "\n"}*>
+    )>
+
+      //<Mem*>
+      //<Func*>
+      //<Export*>
+    

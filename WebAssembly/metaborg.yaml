@@ -1,5 +1,5 @@
 ---
-id: org.example:WebAssembly:0.1.0-SNAPSHOT
+id: org.metaborg.lang:WebAssembly:0.1.0-SNAPSHOT
 name: WebAssembly
 dependencies:
   compile:
@@ -15,6 +15,31 @@ pardonedLanguages:
 - EditorService
 - Stratego-Sugar
 - SDF
+exports:
+- language: ATerm
+  directory: src-gen/syntax
+- language: SDF
+  directory: src-gen/syntax
+  includes: "**/*.sdf"
+- language: TemplateLang
+  directory: syntax
+  includes: "**/*.sdf3"
+- language: Stratego-Sugar
+  directory: trans
+  includes: "**/*.str"
+- language: Stratego-Sugar
+  directory: src-gen
+  includes: "**/*.str"
+  excludes: "nabl2/**/*.str"
+- language: Stratego-Sugar
+  directory: src-gen/nabl2
+  includes: "**/*.str"
+- language: EditorService
+  directory: src-gen
+  includes: "**/*.esv"
+- language: EditorService
+  directory: editor
+  includes: "**/*.esv"
 debug:
   typesmart: false
 language:

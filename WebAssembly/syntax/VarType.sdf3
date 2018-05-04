@@ -1,0 +1,12 @@
+module VarType
+
+imports
+  Common
+
+context-free start-symbols
+  
+  VarType
+
+context-free syntax
+  
+  VarType.I32 = "i32"

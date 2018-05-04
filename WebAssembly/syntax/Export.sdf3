@@ -1,0 +1,19 @@
+module Export
+
+imports
+  
+  Common
+  VarType
+
+context-free start-symbols
+  
+  Export
+
+context-free syntax
+  
+  Export.Export = <
+    (export <STRING> <ExportArg>)>
+
+  ExportArg.Func = <
+    (func <ID>)
+  >

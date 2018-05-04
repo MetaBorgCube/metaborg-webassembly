@@ -1,0 +1,22 @@
+module Data
+
+language WebAssembly
+
+start symbol
+  Data
+
+test Declare Data [[
+  (data (i32.const 0))
+]] parse succeeds
+
+test Declare Data With String Value [[
+  (data (i32.const 0) "Hello, world!\n")
+]] parse succeeds
+
+test Declare Data With Memory Variable [[
+  (data $d (i32.const 0))
+]] parse succeeds
+
+test Declare Data With Memory Variable [[
+  (data $d "Hello, world!\n" )
+]] parse fails
