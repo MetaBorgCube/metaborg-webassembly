@@ -5,7 +5,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.metaborg.lang</groupId>
+  <groupId>org.example</groupId>
   <artifactId>WebAssembly.example</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>spoofax-project</packaging>
@@ -18,7 +18,7 @@
   
   <dependencies>
     <dependency>
-      <groupId>org.metaborg.lang</groupId>
+      <groupId>org.example</groupId>
       <artifactId>WebAssembly</artifactId>
       <version>0.1.0-SNAPSHOT</version>
       <type>spoofax-language</type>

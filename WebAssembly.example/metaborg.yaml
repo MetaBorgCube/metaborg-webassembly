@@ -1,9 +1,9 @@
 ---
-id: org.metaborg.lang:WebAssembly.example:0.1.0-SNAPSHOT
+id: org.example:WebAssembly.example:0.1.0-SNAPSHOT
 name: WebAssembly
 dependencies:
   compile:
-  - org.metaborg.lang:WebAssembly:0.1.0-SNAPSHOT
+  - org.example:WebAssembly:0.1.0-SNAPSHOT
 debug:
   typesmart: false
 runtime:
