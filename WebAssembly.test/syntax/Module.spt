@@ -1,0 +1,30 @@
+module Module
+
+language WebAssembly
+
+start symbol
+  Module
+
+test empty module [[
+  (module
+  )
+]] parse succeeds
+
+test no closing paren [[
+  (module
+  
+]] parse fails
+
+test no module keyword [[
+  (
+  )
+]] parse fails
+  
+test no opening paren [[
+  module
+  )
+]] parse fails
+
+test no parens [[
+  module
+]] parse fails

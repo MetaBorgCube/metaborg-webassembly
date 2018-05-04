@@ -1,21 +1,19 @@
-module Module
+module Import
 
 imports
   
   Common
-  Import
 
 context-free start-symbols
   
-  Module
+  Import
 
 context-free syntax
   
-  Module.Module = 
-    <(module 
-      <Import*>
-    )
-    >
+  Import.Func = 
+    <(func <ID> <ImportStmt>)>
+    
+  ImportStmt.Import = <(import <STRING> <STRING>)>
 
       //<Mem*>
       //<Data*>

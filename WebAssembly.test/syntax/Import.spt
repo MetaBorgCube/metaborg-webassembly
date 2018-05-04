@@ -1,0 +1,10 @@
+module Import
+
+language WebAssembly
+
+start symbol
+  Import
+
+test Import Function [[
+  (func $a (import "b" "c"))
+]] parse succeeds
