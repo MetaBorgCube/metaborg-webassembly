@@ -10,7 +10,7 @@ imports
 
 rules
 
-  editor-format:
+  editor-format-wast:
     (node, _, ast, path, project-path) -> (filename, result)
     with
       ext      := <get-extension> path

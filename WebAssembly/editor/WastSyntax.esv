@@ -18,7 +18,7 @@ menus
   
   menu: "Syntax" (openeditor)
     
-    action: "Format"          = editor-format (source)
+    action: "Format"          = editor-format-wast (source)
     action: "Show parsed AST" = debug-show-aterm (source)
 
 views
