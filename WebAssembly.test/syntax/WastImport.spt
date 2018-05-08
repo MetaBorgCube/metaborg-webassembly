@@ -1,9 +1,9 @@
-module Import
+module WastImport
 
 language WebAssembly
 
 start symbol
-  Import
+  WastImport
 
 // Import Functions
 

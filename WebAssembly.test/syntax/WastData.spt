@@ -1,9 +1,9 @@
-module Data
+module WastData
 
 language WebAssembly
 
 start symbol
-  Data
+  WastData
 
 test Declare Data [[
   (data (i32.const 0))

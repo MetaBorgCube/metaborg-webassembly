@@ -5,9 +5,9 @@ imports
   nabl2/api
   nabl2/runtime
 
-  static-semantics
+  WebAssembly/static-semantics
 
-  pp
+  WebAssembly/pp
 
 rules // Analysis
 
