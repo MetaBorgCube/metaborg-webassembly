@@ -3,7 +3,7 @@ module webassembly
 imports
   
   completion/completion
-  WebAssembly/pp
+  pp
   WebAssembly/outline
   WebAssembly/analysis
 

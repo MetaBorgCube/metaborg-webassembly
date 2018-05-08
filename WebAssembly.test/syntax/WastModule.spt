@@ -1,9 +1,9 @@
-module Module
+module WastModule
 
 language WebAssembly
 
 start symbol
-  Module
+  WastModule
 
 test empty module [[
   (module

@@ -1,4 +1,4 @@
-module pp
+module WebAssembly/pp
 
 imports
 
@@ -15,7 +15,7 @@ rules
     with
       ext      := <get-extension> path
     ; filename := <guarantee-extension(|$[pp.[ext]])> path
-    ; result   := <pp-debug-wasm> node
+    ; result   := <pp-debug-wast> node
 
 rules
   

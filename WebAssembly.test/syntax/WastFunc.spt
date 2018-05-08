@@ -1,9 +1,9 @@
-module Func
+module WastFunc
 
 language WebAssembly
 
 start symbol
-  Func
+  WastFunc
 
 test Declare Func [[
   (func
