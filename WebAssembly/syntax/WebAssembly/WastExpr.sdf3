@@ -10,12 +10,29 @@ context-free start-symbols
 
 context-free syntax
 
-  WastExpr.WastExpr = <( <WastInstr> )> 
+  WastExpr.WastExpr = <(<WastInstr>)> 
+  WastExpr.WastIf = <
+    (if 
+      <WastThen>
+      <WastElse?>
+    )
+    >
   
   WastInstr.WastInstr = WastConst
   WastInstr.WastCall = WastCall
+    
+  WastThen.WastThen = <
+    (then
+      <{WastExpr "\n"}*> 
+    )
+    >
+
+  WastElse.WastElse = <
+    (else
+      <{WastExpr "\n"}*> 
+    )
+    >
   
   WastCall.WastCall = <call <WastID>>
-  
   
   WastConst.I32Const = <i32.const <WastINT>>
