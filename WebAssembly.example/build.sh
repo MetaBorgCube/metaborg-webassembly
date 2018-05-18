@@ -45,7 +45,7 @@ WebAssembly.instantiateStreaming(fetch('${WASM}'), {
   lib: {
     logString: logStringFactory(memory),
   },
-}).then(obj => obj.instance.exports.main());" > $JS
+});" > $JS
 
 # COMPILE WEBASSEMBLY TO BINARY
 
