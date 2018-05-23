@@ -37,15 +37,22 @@ const logStringFactory = memory => (position, length) => {
 
 const memory = new WebAssembly.Memory({initial: 2});
 
-WebAssembly.instantiateStreaming(fetch('${WASM}'), {
+WebAssembly.instantiateStreaming(fetch('Temp.wasm'), {
   memory: {
     memory,
   },
   console,
+  debug: {
+    debugger: (n) => {
+      console.log(n);
+      debugger;
+    },
+  },
   lib: {
     logString: logStringFactory(memory),
   },
-});" > $JS
+});
+" > $JS
 
 # COMPILE WEBASSEMBLY TO BINARY
 

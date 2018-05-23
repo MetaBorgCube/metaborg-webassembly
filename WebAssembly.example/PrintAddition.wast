@@ -67,7 +67,6 @@
             (i32.const 10)
           )
         )
-
         (br_if 1 
            (i32.eq 
              (get_local $digit) 
