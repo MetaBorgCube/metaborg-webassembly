@@ -16,7 +16,7 @@
         (set_local $exp 
           (i32.sub 
             (get_local $exp)
-            (i32.const 1)
+            (get_local 1)
           )
         )
         (br_if 1 (i32.eq (get_local $exp) (i32.const 1)))
@@ -31,13 +31,14 @@
     (local $depth i32)
     (set_local $digit (i32.const 0))  
     (set_local $depth 
-      (call $pow 
-        (i32.const 10) 
-        (i32.sub
-          (get_local $digits)
-          (i32.const 1)
-        )
-      )  
+       (i32.const 1000)
+      ;;(call $pow 
+        ;;(i32.const 10) 
+        ;;(i32.sub
+          ;;(get_local $digits)
+          ;;(i32.const 1)
+        ;;)
+      ;;)  
     )
     (block
       (loop 
@@ -78,33 +79,51 @@
       )
     )
 
-    (i32.load (i32.const 0))
+    (i32.const 4)
     (get_local $digits)
     (call $print)
   )
 
   (func $setup
-;;    (i32.store 
-;;      (i32.const 0) 
-;;      (i32.const 61234)
-;;    )
-    (i32.store 
-      (i32.const 0) 
-      (i32.const 61234)
-    )
+    (i32.const 0)
+    (i32.const 1234)
+    (i32.store)
   )
 
   (func $main
-    (call $setup)
-    (i32.const 0)
-    (call $pow (i32.const 10) (i32.const 3))
-    (i32.store)
 
+    (call $setup)
     (call $printNumbers
       (i32.const 0)
       (i32.const 4)
     )
-  )
 
+;;    (i32.const 0)
+;;    (i32.const 0)
+;;    (i32.load)
+;;    (i32.dup)
+;;    (i32.store)
+;;
+;;    (i32.const 0)   
+;;    (i32.load)
+;;    (i32.const 60)
+;;    (i32.add)
+;;
+;;    (i32.store)
+;;
+;;    (i32.const 0)
+;;    (i32.load)
+;;
+    (i32.const 0)   
+    (i32.const 3)
+    (i32.const 2)
+    (i32.add)
+    (i32.const 48)
+    (i32.add)
+    (i32.store)
+    (i32.const 0)
+    (i32.const 1)
+    (call $print)
+  )
   (start $main)
 )
