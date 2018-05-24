@@ -37,7 +37,7 @@ const logStringFactory = memory => (position, length) => {
 
 const memory = new WebAssembly.Memory({initial: 2});
 
-WebAssembly.instantiateStreaming(fetch('Temp.wasm'), {
+WebAssembly.instantiateStreaming(fetch('${WASM}'), {
   memory: {
     memory,
   },
