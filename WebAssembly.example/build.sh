@@ -42,10 +42,17 @@ WebAssembly.instantiateStreaming(fetch('${WASM}'), {
     memory,
   },
   console,
+  debug: {
+    debugger: (n) => {
+      console.log(n);
+      debugger;
+    },
+  },
   lib: {
     logString: logStringFactory(memory),
   },
-}).then(obj => obj.instance.exports.main());" > $JS
+});
+" > $JS
 
 # COMPILE WEBASSEMBLY TO BINARY
 

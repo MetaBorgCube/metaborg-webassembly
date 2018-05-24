@@ -1,0 +1,23 @@
+module WastStart
+
+language WebAssembly
+
+start symbol
+  WastStart
+
+test start function [[
+  (start $abc)
+]] parse succeeds
+
+test start function without args [[
+  (start)
+]] parse fails
+
+test start function too many args [[
+  (start $a $b)
+]] parse fails
+
+test too many start functions [[
+  (start $a)
+  (start $b)
+]] parse fails

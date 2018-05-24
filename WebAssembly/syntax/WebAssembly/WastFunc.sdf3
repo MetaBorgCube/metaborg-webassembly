@@ -12,7 +12,9 @@ context-free start-symbols
 context-free syntax
   
   WastFunc.WastFunc = <
-    (func <WastID?>
+    (func <WastID?> <{WastParam " "}*>
       <{WastExpr "\n"}*> 
     )
     >
+    
+  WastParam.WastParam = <(param <WastID?> <WastType>)>

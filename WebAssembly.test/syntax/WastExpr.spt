@@ -1,0 +1,119 @@
+module WastExpr
+
+language WebAssembly
+
+start symbol
+  WastExpr
+
+test integers [[
+  (i32.const 0)
+]] parse succeeds
+
+test call function with params [[
+  (call $a
+    (i32.const 0)
+    (i32.const 1)
+  )
+]] parse succeeds
+
+test call function based on id [[
+  (call $a)
+]] parse succeeds
+
+test add integers [[
+  (i32.add 
+    (i32.const 0)
+    (i32.const 1)
+  )
+]] parse succeeds
+
+test add integers with too many params [[
+  (i32.add 
+    (i32.const 1)
+    (i32.const 2)
+    (i32.const 3)
+  )
+]] parse fails
+
+test add integers with too few params [[
+  (i32.add 
+    (i32.const 1)
+  )
+]] parse fails
+
+test set local by index [[
+   (set_local 0
+      (i32.const 0)
+   )
+]] parse succeeds
+
+test set local by id [[
+   (set_local $a
+      (i32.const 0)
+   )
+]] parse succeeds
+
+test declare local i32 [[
+   (local $a i32)
+]] parse succeeds
+
+test get local by index [[
+   (get_local 0)
+]] parse succeeds
+
+test get local by id [[
+   (get_local $a)
+]] parse succeeds
+
+test simple branch  [[
+  (br 0)
+]] parse succeeds
+
+test simple branch if [[
+  (br_if 0
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test i32.le_s  [[
+  (i32.le_s
+     (i32.const 0)
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test i32.ge_s  [[
+  (i32.ge_s
+     (i32.const 0)
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test i32.gt_s  [[
+  (i32.gt_s
+     (i32.const 0)
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test i32.lt_s  [[
+  (i32.lt_s
+     (i32.const 0)
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test i32.equals  [[
+  (i32.eq
+     (i32.const 0)
+     (i32.const 0)
+  )
+]] parse succeeds
+
+test simple while loop  [[
+  (block
+    (loop
+      (br 0)
+    )
+  )
+]] parse succeeds

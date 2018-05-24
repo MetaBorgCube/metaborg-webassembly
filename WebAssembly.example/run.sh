@@ -1,3 +1,3 @@
 #!/bin/bash
 
-http-server
+http-server --port 3000

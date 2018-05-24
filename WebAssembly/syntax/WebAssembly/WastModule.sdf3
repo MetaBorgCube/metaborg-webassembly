@@ -7,6 +7,7 @@ imports
   WebAssembly/WastData
   WebAssembly/WastFunc
   WebAssembly/WastExport
+  WebAssembly/WastStart
 
 context-free start-symbols
   
@@ -20,6 +21,7 @@ context-free syntax
       <{WastData "\n"}*>
       <{WastFunc "\n"}*>
       <{WastExport "\n"}*>
+      <WastStart>
     )>
 
       //<Mem*>

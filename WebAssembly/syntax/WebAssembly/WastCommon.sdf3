@@ -1,5 +1,9 @@
 module WebAssembly/WastCommon
 
+context-free syntax
+
+  WastType.WastI32 = "i32"
+
 lexical syntax
 
   WastID             = "$"[a-zA-Z\_] [a-zA-Z0-9\_]* 
@@ -13,11 +17,7 @@ lexical syntax
   WastBackSlashChar  = "\\" 
 
   LAYOUT         = [\ \t\n\r] 
-  WastCommentChar    = [\*] 
-  LAYOUT         = "/*" WastInsideComment* "*/" 
-  WastInsideComment  = ~[\*] 
-  WastInsideComment  = WastCommentChar 
-  LAYOUT         = "//" ~[\n\r]* WastNewLineEOF 
+  LAYOUT         = ";;" ~[\n\r]* WastNewLineEOF 
   WastNewLineEOF     = [\n\r] 
   WastNewLineEOF     = WastEOF 
   WastEOF            =  
@@ -26,7 +26,6 @@ lexical restrictions
 
   // Ensure greedy matching for lexicals
   
-  WastCommentChar   -/- [\/]
   WastINT           -/- [0-9]
   WastID            -/- [a-zA-Z0-9\_]
 

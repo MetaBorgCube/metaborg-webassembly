@@ -10,16 +10,92 @@ context-free start-symbols
 
 context-free syntax
 
-  WastExpr.WastExpr = <(<WastInstr>)> 
   WastExpr.WastIf = <
     (if 
       <WastThen>
       <WastElse?>
     )
     >
+
+  WastExpr.WastLocal = <(local <WastID?> <WastType>)>
+
+  WastExpr.WastGetLocal = <(get_local <WastID>)>
+  WastExpr.WastGetLocalByIndex = <(get_local <WastINT>)>
+
+  WastExpr.WastSetLocal = <
+    (set_local <WastID>
+      <WastExpr>
+    )
+    >
+  WastExpr.WastSetLocalByIndex = <
+    (set_local <WastINT>
+      <WastExpr>
+    )
+    >
+
+  WastExpr.WastBr = <
+    (br <WastINT>)
+    >
   
-  WastInstr.WastInstr = WastConst
-  WastInstr.WastCall = WastCall
+  WastExpr.WastBrIf = <
+    (br_if <WastINT>
+      <WastExpr>
+    )
+    >
+  
+  WastExpr.WastI32Eq = <
+    (i32.eq 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32GtS = <
+    (i32.gt_s 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32LtS = <
+    (i32.lt_s 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32LeS = <
+    (i32.le_s 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32GeS = <
+    (i32.ge_s 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastCall = <
+    (call <WastID> 
+      <{WastExpr "\n"}*>
+    )>
+    
+  WastExpr.WastBlock = <
+    (block
+      <WastLoop>
+    )>
+    
+  WastLoop.WastLoop = <
+    (loop
+      <{WastExpr "\n"}*>
+    )
+  >
+
+  WastExpr.WastI32Const = <(i32.const <WastINT>)>
+
+  WastExpr.WastAdd = <
+    (i32.add 
+      <WastExpr>
+      <WastExpr>
+    )>
     
   WastThen.WastThen = <
     (then
@@ -33,6 +109,3 @@ context-free syntax
     )
     >
   
-  WastCall.WastCall = <call <WastID>>
-  
-  WastConst.I32Const = <i32.const <WastINT>>
