@@ -1,6 +1,6 @@
 (module
   (func $print (import "lib" "logString") (param i32 i32))
-  ;; (func $debug (import "debug" "debugger") (param i32 i32) )
+  (func $debug (import "debug" "debugger") (param i32 i32) )
   (memory $d (import "memory" "memory") 1)
   (data (i32.const 0) "Hello!")
 

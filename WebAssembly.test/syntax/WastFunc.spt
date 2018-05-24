@@ -15,6 +15,13 @@ test Declare Named Func [[
   )
 ]] parse succeeds
 
+test Declare func with params [[
+  (func $main (param $a i32) (param $b i32)
+    (i32.const 0)
+    (i32.const 14)
+  )
+]] parse succeeds
+
 test Declare func with body [[
   (func $main
     (i32.const 0)
