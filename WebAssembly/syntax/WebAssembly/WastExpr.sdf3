@@ -12,6 +12,7 @@ context-free syntax
 
   WastExpr.WastIf = <
     (if 
+      <WastExpr>
       <WastThen>
       <WastElse?>
     )
