@@ -133,6 +133,17 @@ context-free syntax
       <WastExpr>
       <WastExpr>
     )>
+
+  WastExpr.WastI32Store = <
+    (i32.store
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32Load = <
+    (i32.load
+      <WastExpr>
+    )>
     
   WastThen.WastThen = <
     (then
@@ -145,4 +156,5 @@ context-free syntax
       <{WastExpr "\n"}*> 
     )
     >
+    
   
