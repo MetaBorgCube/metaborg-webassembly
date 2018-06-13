@@ -144,6 +144,16 @@ context-free syntax
     (i32.load
       <WastExpr>
     )>
+
+  WastExpr.WastReturn = <
+    (return
+      <WastExpr>
+    )>
+    
+  WastExpr.WastGrowMemory = <
+    (grow_memory
+      <WastExpr>
+    )>
     
   WastThen.WastThen = <
     (then
