@@ -49,6 +49,12 @@ context-free syntax
       <WastExpr>
       <WastExpr>
     )>
+
+  WastExpr.WastI32Ne = <
+    (i32.ne 
+      <WastExpr>
+      <WastExpr>
+    )>
     
   WastExpr.WastI32GtS = <
     (i32.gt_s 
@@ -92,9 +98,60 @@ context-free syntax
 
   WastExpr.WastI32Const = <(i32.const <WastINT>)>
 
-  WastExpr.WastAdd = <
+  WastExpr.WastI32Add = <
     (i32.add 
       <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32Sub = <
+    (i32.sub 
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32Mul = <
+    (i32.mul 
+      <WastExpr>
+      <WastExpr>
+    )>
+
+  WastExpr.WastI32DivS = <
+    (i32.div_s
+      <WastExpr>
+      <WastExpr>
+    )>
+
+  WastExpr.WastI32RemS = <
+    (i32.rem_s
+      <WastExpr>
+      <WastExpr>
+    )>
+
+  WastExpr.WastF32DivS = <
+    (f32.div_s
+      <WastExpr>
+      <WastExpr>
+    )>
+
+  WastExpr.WastI32Store = <
+    (i32.store
+      <WastExpr>
+      <WastExpr>
+    )>
+    
+  WastExpr.WastI32Load = <
+    (i32.load
+      <WastExpr>
+    )>
+
+  WastExpr.WastReturn = <
+    (return
+      <WastExpr>
+    )>
+    
+  WastExpr.WastGrowMemory = <
+    (grow_memory
       <WastExpr>
     )>
     
@@ -109,4 +166,5 @@ context-free syntax
       <{WastExpr "\n"}*> 
     )
     >
+    
   
