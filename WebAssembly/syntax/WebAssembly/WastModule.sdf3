@@ -1,0 +1,30 @@
+module WebAssembly/WastModule
+
+imports
+  
+  WebAssembly/WastCommon
+  WebAssembly/WastImport
+  WebAssembly/WastData
+  WebAssembly/WastFunc
+  WebAssembly/WastExport
+  WebAssembly/WastStart
+
+context-free start-symbols
+  
+  WastModule
+
+context-free syntax
+  
+  WastModule.WastModule = <
+    (module 
+      <{WastImport "\n"}*>
+      <{WastData "\n"}*>
+      <{WastFunc "\n"}*>
+      <{WastExport "\n"}*>
+      <WastStart>
+    )>
+
+      //<Mem*>
+      //<Func*>
+      //<Export*>
+    

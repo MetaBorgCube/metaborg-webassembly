@@ -1,0 +1,30 @@
+module WastFunc
+
+language WebAssembly
+
+start symbol
+  WastFunc
+
+test Declare Func [[
+  (func
+  )
+]] parse succeeds
+
+test Declare Named Func [[
+  (func $main
+  )
+]] parse succeeds
+
+test Declare func with params [[
+  (func $main (param $a i32) (param $b i32)
+    (i32.const 0)
+    (i32.const 14)
+  )
+]] parse succeeds
+
+test Declare func with body [[
+  (func $main
+    (i32.const 0)
+    (i32.const 14)
+  )
+]] parse succeeds

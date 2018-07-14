@@ -1,0 +1,15 @@
+(module
+  (func $a (import "lib" "logString") (param i32 i32))
+  (memory $d (import "memory" "memory") 1)
+  (data (i32.const 0) "Hello, Rasmus!\n")
+  (data (i32.const 15) "Hello, Chiel!\n")
+   (func $main
+    (i32.const 0)
+    (i32.const 14)
+    (call $a)
+    (i32.const 15)
+    (i32.const 14)
+    (call $a)
+  )
+  (export "main" (func $main))
+)
